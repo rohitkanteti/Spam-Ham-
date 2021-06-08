@@ -1,8 +1,8 @@
 import streamlit as st
 import joblib
-model = joblib.load('Email_model')
-st.title('Spam Ham Classifier')
-ip = st.text_input('Enter your message')
+model = joblib.load('sentiment-analysis')
+st.title('Senriment-analysis')
+ip = st.text_input('Enter your review')
 op = model.predict([ip])
 if st.button('Predict'):
   st.title(op[0])  
